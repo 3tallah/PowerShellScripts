@@ -13,7 +13,9 @@
 #Define CSV file location variables
 #CSV file Should include two rows (One for User IDs "Name" and one for Mailboxes "Mail")
 
-$csv = Import-Csv C:\Users\mat801\Downloads\users.csv 
+$csvfilepath = "<csv file path>"
+
+$csv = Import-Csv $csvfilepath
 
 $csv | ForEach-Object -Process{
 $users = $_.name
