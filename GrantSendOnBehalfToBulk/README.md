@@ -13,7 +13,7 @@ Attachments:
 users.csv file
 ```
 
-* The below screen shot shows a sample of the CSV file. "[users.csv](https://gallery.technet.microsoft.com/exchange/site/view/file/178302/1/users.csv)"
+* The below screen shot shows a sample of the CSV file. "[users.csv](GrantSendOnBehalfToBulk/Users.csv)"
 * ![img](https://raw.githubusercontent.com/3tallah/PowerShellScripts/master/GrantSendOnBehalfToBulk/Capturess.JPG)
 * CSV file Should include two rows (One for User IDs "Name" and one for Mailboxes "Mail")
 
