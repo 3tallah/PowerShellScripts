@@ -17,3 +17,4 @@ users.csv file
 * ![img](https://raw.githubusercontent.com/3tallah/PowerShellScripts/master/GrantSendOnBehalfToBulk/Capturess.JPG)
 * CSV file Should include two rows (One for User IDs "Name" and one for Mailboxes "Mail")
 
+TechNet Link "[Link](https://gallery.technet.microsoft.com/Grant-SendOnBehalf-and-175fee83)"
