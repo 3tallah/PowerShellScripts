@@ -18,8 +18,6 @@ This script helping you to:
 
 *NOTE : Before we proceed with MFA and SSPR Enablement and configuration,* *Users will be able to change their Authentication mobile phone number whenever they need to, Admins won’t have a control on Authentication mobile phone number however they can pre-define them but still users will be able to change it.*
 
-*
-*
 
 **Keep in mind:**
 
