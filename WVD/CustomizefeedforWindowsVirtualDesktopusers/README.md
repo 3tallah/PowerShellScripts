@@ -12,6 +12,6 @@ First, [download and import the Windows Virtual Desktop PowerShell module](https
 
 ### Sample
 
-* The below screen shot shows a sample of the WVD Client.![image-20200421111533366](C:\Users\XUp\AppData\Roaming\Typora\typora-user-images\image-20200421111533366.png)
+* The below screen shot shows a sample of the WVD Client.![image-20200421111533366](https://raw.githubusercontent.com/3tallah/PowerShellScripts/master/WVD/CustomizefeedforWindowsVirtualDesktopusers/image-20200421111533366.png)
 
   
