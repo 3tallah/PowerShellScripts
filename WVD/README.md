@@ -1,6 +1,6 @@
-# Customize feed for Windows Virtual Desktop users
+# Windows Virtual Desktop PowerShell Scipts and Commands
 
-Sharing with you some helpful PowerShell commands that help you to customize your WVD feed so the RemoteApp and remote desktop resources appear in a recognizable way for your users.
+Sharing with you some helpful PowerShell Scipts and Commands that help you to  build and customize your WVD.
 
 
 
@@ -8,10 +8,3 @@ Sharing with you some helpful PowerShell commands that help you to customize you
 
 First, [download and import the Windows Virtual Desktop PowerShell module](https://docs.microsoft.com/en-us/powershell/windows-virtual-desktop/overview/) to use in your PowerShell session if you haven't already. After that, run the following cmdlet to sign in to your account:
 
-
-
-### Sample
-
-* The below screen shot shows a sample of the WVD Client.![image-20200421111533366](C:\Users\XUp\AppData\Roaming\Typora\typora-user-images\image-20200421111533366.png)
-
-  
