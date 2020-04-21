@@ -15,3 +15,6 @@ First, [download and import the Windows Virtual Desktop PowerShell module](https
 * The below screen shot shows a sample of the WVD Client.![image-20200421111533366](https://raw.githubusercontent.com/3tallah/PowerShellScripts/master/WVD/CustomizefeedforWindowsVirtualDesktopusers/image-20200421111533366.png)
 
   
+  ### For Bootcamp and Teamwork
+
+Join Our [Facebook Group](https://www.facebook.com/groups/236332240896416)
