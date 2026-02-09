@@ -1,0 +1,58 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "automationAccountName": {
+            "value": "automation-cost-optimization-dev"
+        },
+        "location": {
+            "value": "eastus"
+        },
+        "mysqlResourceGroupName": {
+            "value": "rg-mysql-dev"
+        },
+        "mysqlServerName": {
+            "value": "mysql-server-dev"
+        },
+        "mysqlScaleUpSku": {
+            "value": "Standard_D2ads_v5"
+        },
+        "mysqlScaleUpTier": {
+            "value": "GeneralPurpose"
+        },
+        "mysqlScaleDownSku": {
+            "value": "Standard_B1ms"
+        },
+        "mysqlScaleDownTier": {
+            "value": "Burstable"
+        },
+        "vmResourceGroupName": {
+            "value": "rg-vm-dev"
+        },
+        "vmName": {
+            "value": "vm-app-dev"
+        },
+        "vmScaleUpSize": {
+            "value": "Standard_D2s_v5"
+        },
+        "vmScaleDownSize": {
+            "value": "Standard_B1ms"
+        },
+        "scaleUpTime": {
+            "value": "08:00"
+        },
+        "scaleDownTime": {
+            "value": "18:00"
+        },
+        "webhookUri": {
+            "value": ""
+        },
+        "tags": {
+            "value": {
+                "Environment": "Development",
+                "Purpose": "CostOptimization",
+                "ManagedBy": "Automation"
+            }
+        }
+    }
+}

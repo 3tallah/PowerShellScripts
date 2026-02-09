@@ -1,0 +1,71 @@
+# PowerShell
+*.ps1xml
+*.psc1
+*.pssc
+
+# Azure
+*.publishsettings
+*.azurePubxml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# Secrets and credentials
+*.pfx
+*.key
+*.pem
+*.cer
+*.p12
+config.json
+parameters-local.json
+local.settings.json
+*.publishsettings
+
+# Logs
+*.log
+logs/
+output/
+temp/
+tmp/
+
+# Build outputs
+bin/
+obj/
+out/
+
+# Test results
+TestResults/
+*.trx
+coverage/
+*.coverage
+
+# Package managers
+node_modules/
+packages/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Archive files
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+
+# Documentation build
+docs/_site/
+docs/.sass-cache/

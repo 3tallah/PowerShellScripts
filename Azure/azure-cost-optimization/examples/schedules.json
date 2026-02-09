@@ -1,0 +1,212 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Azure Cost Optimization Schedules",
+    "description": "Example schedule configurations for different scenarios",
+    "schedules": {
+        "standard-business-hours": {
+            "description": "Standard business hours (9 AM - 6 PM, Monday-Friday)",
+            "scaleUp": {
+                "time": "09:00",
+                "timeZone": "UTC",
+                "frequency": "Day",
+                "interval": 1,
+                "weekDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+            },
+            "scaleDown": {
+                "time": "18:00",
+                "timeZone": "UTC",
+                "frequency": "Day",
+                "interval": 1,
+                "weekDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+            }
+        },
+        "extended-hours": {
+            "description": "Extended business hours (7 AM - 10 PM, Monday-Saturday)",
+            "scaleUp": {
+                "time": "07:00",
+                "timeZone": "UTC",
+                "frequency": "Day",
+                "interval": 1,
+                "weekDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+            },
+            "scaleDown": {
+                "time": "22:00",
+                "timeZone": "UTC",
+                "frequency": "Day",
+                "interval": 1,
+                "weekDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+            }
+        },
+        "us-eastern-business": {
+            "description": "US Eastern business hours (8 AM - 6 PM EST)",
+            "scaleUp": {
+                "time": "08:00",
+                "timeZone": "Eastern Standard Time",
+                "frequency": "Day",
+                "interval": 1,
+                "weekDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+            },
+            "scaleDown": {
+                "time": "18:00",
+                "timeZone": "Eastern Standard Time",
+                "frequency": "Day",
+                "interval": 1,
+                "weekDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+            }
+        },
+        "europe-business": {
+            "description": "European business hours (8 AM - 6 PM CET)",
+            "scaleUp": {
+                "time": "08:00",
+                "timeZone": "Central European Standard Time",
+                "frequency": "Day",
+                "interval": 1,
+                "weekDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+            },
+            "scaleDown": {
+                "time": "18:00",
+                "timeZone": "Central European Standard Time",
+                "frequency": "Day",
+                "interval": 1,
+                "weekDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+            }
+        },
+        "asia-pacific-business": {
+            "description": "Asia-Pacific business hours (9 AM - 7 PM SGT)",
+            "scaleUp": {
+                "time": "09:00",
+                "timeZone": "Singapore Standard Time",
+                "frequency": "Day",
+                "interval": 1,
+                "weekDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+            },
+            "scaleDown": {
+                "time": "19:00",
+                "timeZone": "Singapore Standard Time",
+                "frequency": "Day",
+                "interval": 1,
+                "weekDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+            }
+        },
+        "weekend-only": {
+            "description": "Weekends only (for development/testing environments)",
+            "scaleUp": {
+                "time": "00:00",
+                "timeZone": "UTC",
+                "frequency": "Week",
+                "interval": 1,
+                "weekDays": ["Saturday"]
+            },
+            "scaleDown": {
+                "time": "00:00",
+                "timeZone": "UTC",
+                "frequency": "Week",
+                "interval": 1,
+                "weekDays": ["Monday"]
+            }
+        },
+        "peak-hours-only": {
+            "description": "Peak traffic hours (10 AM - 4 PM)",
+            "scaleUp": {
+                "time": "10:00",
+                "timeZone": "UTC",
+                "frequency": "Day",
+                "interval": 1
+            },
+            "scaleDown": {
+                "time": "16:00",
+                "timeZone": "UTC",
+                "frequency": "Day",
+                "interval": 1
+            }
+        }
+    },
+    "skuConfigurations": {
+        "mysql": {
+            "development": {
+                "peakSku": "Standard_D2ads_v5",
+                "peakTier": "GeneralPurpose",
+                "offPeakSku": "Standard_B1ms",
+                "offPeakTier": "Burstable"
+            },
+            "staging": {
+                "peakSku": "Standard_D4ads_v5",
+                "peakTier": "GeneralPurpose",
+                "offPeakSku": "Standard_B2s",
+                "offPeakTier": "Burstable"
+            },
+            "production-standard": {
+                "peakSku": "Standard_D4ads_v5",
+                "peakTier": "GeneralPurpose",
+                "offPeakSku": "Standard_B2s",
+                "offPeakTier": "Burstable"
+            },
+            "production-high-load": {
+                "peakSku": "Standard_D8ads_v5",
+                "peakTier": "GeneralPurpose",
+                "offPeakSku": "Standard_B2ms",
+                "offPeakTier": "Burstable"
+            },
+            "production-memory-intensive": {
+                "peakSku": "Standard_E4ads_v5",
+                "peakTier": "MemoryOptimized",
+                "offPeakSku": "Standard_D2ads_v5",
+                "offPeakTier": "GeneralPurpose"
+            }
+        },
+        "vm": {
+            "development": {
+                "peakSize": "Standard_D2s_v5",
+                "offPeakSize": "Standard_B1ms"
+            },
+            "staging": {
+                "peakSize": "Standard_D4s_v5",
+                "offPeakSize": "Standard_B2s"
+            },
+            "production-standard": {
+                "peakSize": "Standard_D4s_v5",
+                "offPeakSize": "Standard_B2s"
+            },
+            "production-high-compute": {
+                "peakSize": "Standard_D8s_v5",
+                "offPeakSize": "Standard_B4ms"
+            },
+            "production-memory-optimized": {
+                "peakSize": "Standard_E4s_v5",
+                "offPeakSize": "Standard_D2s_v5"
+            }
+        }
+    },
+    "costSavingsEstimates": {
+        "description": "Estimated monthly savings based on 12 hours off-peak per day",
+        "mysql": {
+            "Standard_D4ads_v5_to_B2s": {
+                "peakHourlyCost": 0.178,
+                "offPeakHourlyCost": 0.049,
+                "estimatedMonthlySavings": "~$46.08",
+                "savingsPercentage": "~72%"
+            },
+            "Standard_D8ads_v5_to_B2ms": {
+                "peakHourlyCost": 0.356,
+                "offPeakHourlyCost": 0.098,
+                "estimatedMonthlySavings": "~$92.88",
+                "savingsPercentage": "~72%"
+            }
+        },
+        "vm": {
+            "Standard_D4s_v5_to_B2s": {
+                "peakHourlyCost": 0.192,
+                "offPeakHourlyCost": 0.041,
+                "estimatedMonthlySavings": "~$54.36",
+                "savingsPercentage": "~79%"
+            },
+            "Standard_D8s_v5_to_B4ms": {
+                "peakHourlyCost": 0.384,
+                "offPeakHourlyCost": 0.166,
+                "estimatedMonthlySavings": "~$78.48",
+                "savingsPercentage": "~57%"
+            }
+        },
+        "note": "Prices are estimates based on East US region. Actual prices vary by region and may change."
+    }
+}
